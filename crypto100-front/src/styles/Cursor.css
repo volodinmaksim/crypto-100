@@ -1,0 +1,46 @@
+/* Custom Cursor Styles */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #2563eb; /* Blue color, you can change this */
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #2563eb;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: all 0.2s ease-out;
+  mix-blend-mode: difference;
+}
+
+/* Hover effects */
+.cursor-dot.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: #ff3e9d; /* Change color on hover */
+}
+
+.cursor-outline.hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  border-color: #ff3e9d; /* Change color on hover */
+  background-color: rgba(255, 62, 157, 0.1);
+}
+
+/* Hide cursor on touch devices */
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+}
