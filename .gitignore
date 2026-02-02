@@ -7,6 +7,10 @@
 # Testing
 /coverage
 
+node_modules/
+
+dist/
+
 # Production
 /build
 /dist
